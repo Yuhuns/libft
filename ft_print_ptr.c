@@ -6,11 +6,12 @@
 /*   By: awallet <awallet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 17:53:42 by awallet           #+#    #+#             */
-/*   Updated: 2022/07/26 21:30:03 by awallet          ###   ########.fr       */
+/*   Updated: 2022/08/07 16:35:54 by awallet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "ft_printf.h"
 
 static int	ft_putptr(unsigned long int n, const char *p, int fd)
 {

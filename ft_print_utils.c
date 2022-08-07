@@ -6,11 +6,12 @@
 /*   By: awallet <awallet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 13:02:01 by awallet           #+#    #+#             */
-/*   Updated: 2022/07/26 21:30:09 by awallet          ###   ########.fr       */
+/*   Updated: 2022/08/07 16:35:51 by awallet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "ft_printf.h"
 
 int	ft_print_putstr_fd(char *s, int fd)
 {

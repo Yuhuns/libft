@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_base.c                                    :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: awallet <awallet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/23 16:31:15 by awallet           #+#    #+#             */
-/*   Updated: 2022/08/07 16:35:59 by awallet          ###   ########.fr       */
+/*   Created: 2022/08/07 16:33:51 by awallet           #+#    #+#             */
+/*   Updated: 2022/08/07 16:37:09 by awallet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "ft_printf.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-int	ft_print_base(unsigned int n, const char *p, int base, int fd)
-{
-	long	nb;
-	int		len;
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
-	len = 0;
-	nb = n;
-	if (nb >= base)
-		len += ft_print_base(nb / base, p, base, fd);
-	len += ft_print_putchar_fd(p[nb % base], fd);
-	return (len);
-}
+# ifndef MAX_FD
+#  define MAX_FD 1024
+# endif
+
+char	*get_next_line(int fd);
+
+#endif

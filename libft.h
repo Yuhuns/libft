@@ -6,7 +6,7 @@
 /*   By: awallet <awallet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 18:33:17 by awallet           #+#    #+#             */
-/*   Updated: 2022/07/26 21:35:27 by awallet          ###   ########.fr       */
+/*   Updated: 2022/08/07 16:36:26 by awallet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdarg.h>
 
-// GET_NEXT_LINE
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
-# endif
-
-# ifndef MAX_FD
-#  define MAX_FD 1024
-# endif
-
-// FT_PRINTF
-# define BIG "0123456789ABCDEF"
-# define LIT "0123456789abcdef"
-# define NUM "0123456789"
-# if defined (__APPLE__)
-#  define PTR_NULL "0x0"
-#  define IS_APPLE 1
-# elif __linux__
-#  define PTR_NULL "(nil)"
-#  define IS_APPLE 0
-# endif
-
-// LIBFT
 typedef struct s_list
 {
 	void			*content;
@@ -93,14 +70,5 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-// GET_NET_LINE
-char	*get_next_line(int fd);
-// FT_PRINTF
-int		ft_print_putchar_fd(int c, int fd);
-int		ft_printf(const char *str, ...);
-int		ft_print_putstr_fd(char *s, int fd);
-int		ft_print_nbr(int nb, int fd);
-int		ft_print_base(unsigned int n, const char *pattern, int base, int fd);
-int		ft_print_ptr(unsigned long int n, const char *p, int fd);
 
 #endif

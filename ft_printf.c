@@ -6,11 +6,12 @@
 /*   By: awallet <awallet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 12:39:08 by awallet           #+#    #+#             */
-/*   Updated: 2022/07/26 21:30:17 by awallet          ###   ########.fr       */
+/*   Updated: 2022/08/07 16:34:43 by awallet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
+#include "ft_printf.h"
 
 static int	ft_format(va_list *args, const char format)
 {

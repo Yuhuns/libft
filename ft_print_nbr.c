@@ -6,11 +6,12 @@
 /*   By: awallet <awallet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 16:31:48 by awallet           #+#    #+#             */
-/*   Updated: 2022/07/26 21:29:59 by awallet          ###   ########.fr       */
+/*   Updated: 2022/08/07 16:35:56 by awallet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "ft_printf.h"
 
 int	ft_print_nbr(int n, int fd)
 {

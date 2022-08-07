@@ -6,11 +6,12 @@
 /*   By: awallet <awallet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 22:11:46 by awallet           #+#    #+#             */
-/*   Updated: 2022/07/19 21:47:02 by awallet          ###   ########.fr       */
+/*   Updated: 2022/08/07 16:30:04 by awallet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "get_next_line.h"
 
 static int	ft_error(int fd)
 {

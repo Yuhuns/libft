@@ -6,7 +6,7 @@
 #    By: awallet <awallet@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/02 18:03:30 by awallet           #+#    #+#              #
-#    Updated: 2022/07/26 21:25:33 by awallet          ###   ########.fr        #
+#    Updated: 2022/08/07 16:37:42 by awallet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,6 +70,8 @@ SRC =   ft_atoi.c \
 		       
 OBJS = $(SRC:.c=.o)
 
+DEPS = $(OBJS:.o=.d)
+
 CC = gcc
 
 CCFLAGS = -Wall -Werror -Wextra
@@ -79,7 +81,7 @@ AR = ar rcs
 RM = rm -f
 
 %.o:  %.c 
-	${CC} ${CCFLAGS} -c $< -o $@
+	${CC} ${CCFLAGS} -MMD -c $< -o $@
 
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
@@ -88,6 +90,7 @@ all:	$(NAME)
 
 clean:
 	$(RM) $(OBJS)
+	$(RM) $(DEPS)
 
 fclean: clean
 	$(RM) $(NAME)
@@ -95,3 +98,5 @@ fclean: clean
 re:	fclean all
 
 .PHONY : all clean fclean re
+
+-include $(DEPS)
